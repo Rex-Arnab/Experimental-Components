@@ -18,16 +18,70 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* App.css */
+
+/* Styles for the Live Code Editor */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #282c34; */
+  color: white;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  border: 1px solid #282c34;
+  width: 100vw;
+}
+
+.top-pane {
+  display: flex;
+  gap: 1rem;
+}
+
+.output{
+  flex-grow: 1;
+}
+
+.editor{
+  padding: 1rem;
+}
+
+.code{
+  flex-grow: 0;
+}
+
+
+.editor h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #61dafb;
+}
+
+iframe {
+  border: none;
+  background: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .top-pane {
+    flex-direction: column;
+  }
+
+  .editor {
+    height: 200px;
   }
 }

@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+  background: repeating-linear-gradient(
+    0deg,
+    #f0f0f0,
+    #f0f0f0 1px,
+    #ffffff 1px,
+    #ffffff 20px
+  );
+  cursor: crosshair;
+}
+
+.text-item {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.text-item:hover {
+  transform: scale(1.05);
+}
